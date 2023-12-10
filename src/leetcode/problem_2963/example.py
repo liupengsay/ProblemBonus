@@ -22,7 +22,7 @@ class TestGeneral(unittest.TestCase):
             with open(f"test_data/example_{file}.out", "w", encoding="utf-8") as fw:
                 fw.write(str(ans1))
             assert ans1 == ans2
-            print(n, ans1, ans1 >= 2**32 - 1)
+            print(ans1, ans1 >= 2**32 - 1)
 
         for file in range(11, 21):
             n = random.randint(100000 // (file - 10), 100000)
@@ -34,7 +34,7 @@ class TestGeneral(unittest.TestCase):
                 fw.write("\n".join(lst))
             with open(f"test_data/example_{file}.out", "w", encoding="utf-8") as fw:
                 fw.write(str(ans1))
-            print(n, ans1, ans1 >= 2**32 - 1)
+            print(ans1, ans1 >= 2**32 - 1)
 
         zip_folder("test_data", "test_data.zip")
         return
