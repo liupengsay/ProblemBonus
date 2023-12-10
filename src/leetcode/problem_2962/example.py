@@ -16,10 +16,10 @@ class TestGeneral(unittest.TestCase):
             k = random.randint(1, 10)
             ans1 = count_subarrays(nums, k)
             ans2 = count_subarrays_brute_force(nums, k)
-            with open(f"data/example_{file}.in", "w", encoding="utf-8") as fw:
+            with open(f"test_data/example_{file}.in", "w", encoding="utf-8") as fw:
                 lst = [f"{n} {k}", " ".join(str(x) for x in nums)]
                 fw.write("\n".join(lst))
-            with open(f"data/example_{file}.out", "w", encoding="utf-8") as fw:
+            with open(f"test_data/example_{file}.out", "w", encoding="utf-8") as fw:
                 fw.write(str(ans1))
             assert ans1 == ans2
             print(ans1, ans1 >= 2**32 - 1)
@@ -29,14 +29,14 @@ class TestGeneral(unittest.TestCase):
             nums = [random.randint(100000 // (file - 10), n) for _ in range(n)]
             k = random.randint(1, 5)
             ans1 = count_subarrays(nums, k)
-            with open(f"data/example_{file}.in", "w", encoding="utf-8") as fw:
+            with open(f"test_data/example_{file}.in", "w", encoding="utf-8") as fw:
                 lst = [f"{n} {k}", " ".join(str(x) for x in nums)]
                 fw.write("\n".join(lst))
-            with open(f"data/example_{file}.out", "w", encoding="utf-8") as fw:
+            with open(f"test_data/example_{file}.out", "w", encoding="utf-8") as fw:
                 fw.write(str(ans1))
             print(ans1, ans1 >= 2**32 - 1)
 
-        zip_folder("data", "problem_0001.zip")
+        zip_folder("test_data", "test_data.zip")
         return
 
 
