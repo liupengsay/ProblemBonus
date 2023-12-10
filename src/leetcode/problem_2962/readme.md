@@ -41,3 +41,6 @@ The subarrays which contain the max element of that subarray at least 2 times ar
 
 ### Explanation2:
 No subarray which contains the max element of that subarray at least 3 times.
+
+### Standard procedures and test cases
+[Another LeetCode 2962](https://github.com/liupengsay/ProblemBonus/tree/main/src/leetcode/problem_2962)
