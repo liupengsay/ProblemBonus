@@ -1,7 +1,7 @@
 import random
 import unittest
 
-from solution import standard_procedure, standard_procedure_brute_force
+from solution import standard_procedure, brute_force
 from src.utils.folder_to_zip import zip_folder
 
 random.seed(2023)
@@ -15,7 +15,7 @@ class TestGeneral(unittest.TestCase):
             nums = [random.randint(1, 10) for _ in range(n)]
             k = random.randint(1, 10)
             ans1 = standard_procedure(nums, k)
-            ans2 = standard_procedure_brute_force(nums, k)
+            ans2 = brute_force(nums, k)
             with open(f"test_data/example_{file}.in", "w", encoding="utf-8") as fw:
                 lst = [f"{n} {k}", " ".join(str(x) for x in nums)]
                 fw.write("\n".join(lst))

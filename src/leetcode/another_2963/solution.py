@@ -21,7 +21,7 @@ def standard_procedure(nums: List[int]) -> int:
     return dp[-1]
 
 
-def standard_procedure_brute_force(nums: List[int]) -> int:
+def brute_force(nums: List[int]) -> int:
     n = len(nums)
     dp = [0] * (n + 1)
     dp[0] = 1
@@ -39,7 +39,7 @@ def standard_procedure_brute_force(nums: List[int]) -> int:
     return dp[-1]
 
 
-def standard_procedure_brute_force_2(nums: List[int]) -> int:
+def brute_force_2(nums: List[int]) -> int:
     n = len(nums)
     dp = [0] * (n + 1)
     dp[0] = 1

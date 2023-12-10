@@ -3,7 +3,7 @@
 Another LeetCode 2963
 
 # From
-[LeetCode 2963. Count the Number of Good Partitions](https://leetcode.com/contest/weekly-contest-375/problems/count-the-number-of-good-partitions/)
+[LeetCode 2963. Count the Number of Good Partitions](https://leetcode.com/problems/count-the-number-of-good-partitions/)
 
 # Description
 
@@ -46,7 +46,7 @@ The 8 possible good partitions are: ([1], [2], [3], [4]), ([1], [2], [3,4]), ([1
 ### Explanation2:
 The only possible good partition is: ([1], [1], [1], [1]).
 ### Explanation3:
-The 6 possible good partitions are: ([1], [2], [1], [3]), ([1], [2], [1,3]), ([1], [2,1,3]), ([1], [2,1], [3]), ([1,2], [1,3]), ([1,2], [1], [3]), 
+The 6 possible good partitions are: ([1], [2], [1], [3]), ([1], [2], [1,3]), ([1], [2,1,3]), ([1], [2,1], [3]), ([1,2], [1,3]), and ([1,2], [1], [3]).
 
 ### Standard procedures and test cases
 [Another LeetCode 2963](https://github.com/liupengsay/ProblemBonus/tree/main/src/leetcode/another_2963)

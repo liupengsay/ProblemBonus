@@ -36,7 +36,7 @@ def standard_procedure(nums: List[int], k: int) -> int:
     return ans
 
 
-def standard_procedure_brute_force(nums: List[int], k: int) -> int:
+def brute_force(nums: List[int], k: int) -> int:
     n = len(nums)
     ans = 0
     for i in range(n):
