@@ -2,7 +2,7 @@ from collections import defaultdict
 from typing import List
 
 
-def count_subarrays(nums: List[int], k: int) -> int:
+def standard_procedure(nums: List[int], k: int) -> int:
     n = len(nums)
     ans = 0
 
@@ -36,7 +36,7 @@ def count_subarrays(nums: List[int], k: int) -> int:
     return ans
 
 
-def count_subarrays_brute_force(nums: List[int], k: int) -> int:
+def standard_procedure_brute_force(nums: List[int], k: int) -> int:
     n = len(nums)
     ans = 0
     for i in range(n):

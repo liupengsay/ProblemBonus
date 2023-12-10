@@ -1,46 +1,52 @@
 
 # Title
-Another LeetCode 2962
+Another LeetCode 2963
 
 # From
-[LeetCode 2962. Count Subarrays Where Max Element Appears at Least K Times](https://leetcode.com/problems/count-subarrays-where-max-element-appears-at-least-k-times/
-)
+[LeetCode 2963. Count the Number of Good Partitions](https://leetcode.com/contest/weekly-contest-375/problems/count-the-number-of-good-partitions/)
 
 # Description
 
-You are given an non-empty positive integer array **nums** with length **n** and a positive integer **k**.
+You are given a **0-indexed** array nums consisting of positive integers.
 
-Return the number of subarrays where **the maximum element of that subarray** appears **at least k** times in that subarray.
+A partition of an array into one or more **contiguous** subarrays is called **good** if every subarray is **non-empty** and contains **distinct** numbers.
 
-A subarray is a **contiguous sequence** of elements within an array.
+Print the **total number** of good partitions of nums.
+
+Since the answer may be large, print it modulo **$10^9 + 7$**.
 
 # InputFormat
-The first line contains two integers $n$ and $k$($1<=n<=10^5, 1<=k<=10^5$), denoting the
-length of the non-empty positive integer array and the times which the maximum element of that subarray must appears at least in that subarray.
+The first line contains a integer $n$($1<=n<=10^5$), denoting the
+length of the non-empty positive integer array.
 
-The second line contains an non-empty positive integer array $nums$, with length $n$($1 <= nums[i] <= 10^6$, $1 <= i <= n$).
+The second line contains a positive integer array $nums$, with length $n$($1 <= nums[i] <= 10^9$, $0 <= i < n$).
 
 # OutputFormat
-print a single interger denoting the number of subarrays where the maximum element of that subarray appears at least $k$ times in that subarray.
+print a single interger denoting the total number of good partitions of nums.
 
 # Example
 ## input1
-5 2
-1 3 2 3 3
+4
+1 2 3 4
 ## output1
-6
+8
 ## input2
-4 3
-1 4 2 1
+4
+1 1 1 1
 ## output2
-0
-
+1
+## input3
+4
+1 2 1 3
+## output3
+6
 # Note
 ### Explanation1:
-The subarrays which contain the max element of that subarray at least 2 times are: [1,3,2,3], [1,3,2,3,3], [3,2,3], [3,2,3,3], [2,3,3] and [3,3].
-
+The 8 possible good partitions are: ([1], [2], [3], [4]), ([1], [2], [3,4]), ([1], [2,3], [4]), ([1], [2,3,4]), ([1,2], [3], [4]), ([1,2], [3,4]), ([1,2,3], [4]), and ([1,2,3,4]).
 ### Explanation2:
-No subarray which contains the max element of that subarray at least 3 times.
+The only possible good partition is: ([1], [1], [1], [1]).
+### Explanation3:
+The 6 possible good partitions are: ([1], [2], [1], [3]), ([1], [2], [1,3]), ([1], [2,1,3]), ([1], [2,1], [3]), ([1,2], [1,3]), ([1,2], [1], [3]), 
 
 ### Standard procedures and test cases
-[Another LeetCode 2962](https://github.com/liupengsay/ProblemBonus/tree/main/src/leetcode/problem_2962)
+[Another LeetCode 2963](https://github.com/liupengsay/ProblemBonus/tree/main/src/leetcode/another_2963)

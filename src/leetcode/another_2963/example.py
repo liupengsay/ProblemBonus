@@ -1,8 +1,9 @@
 import random
 import unittest
 
-from solution import count_subarrays, count_subarrays_brute_force
+from solution import standard_procedure, standard_procedure_brute_force, standard_procedure_brute_force_2
 from src.utils.folder_to_zip import zip_folder
+
 
 random.seed(2023)
 
@@ -13,28 +14,27 @@ class TestGeneral(unittest.TestCase):
         for file in range(1, 11):
             n = random.randint(1, 1000)
             nums = [random.randint(1, 10) for _ in range(n)]
-            k = random.randint(1, 10)
-            ans1 = count_subarrays(nums, k)
-            ans2 = count_subarrays_brute_force(nums, k)
+            ans1 = standard_procedure(nums)
+            ans2 = standard_procedure_brute_force(nums)
+            ans3 = standard_procedure_brute_force_2(nums)
             with open(f"test_data/example_{file}.in", "w", encoding="utf-8") as fw:
-                lst = [f"{n} {k}", " ".join(str(x) for x in nums)]
+                lst = [f"{n}", " ".join(str(x) for x in nums)]
                 fw.write("\n".join(lst))
             with open(f"test_data/example_{file}.out", "w", encoding="utf-8") as fw:
                 fw.write(str(ans1))
-            assert ans1 == ans2
-            print(ans1, ans1 >= 2**32 - 1)
+            assert ans1 == ans2 == ans3
+            print(n, ans1)
 
         for file in range(11, 21):
-            n = random.randint(100000 // (file - 10), 100000)
-            nums = [random.randint(100000 // (file - 10), n) for _ in range(n)]
-            k = random.randint(1, 5)
-            ans1 = count_subarrays(nums, k)
+            n = random.randint(10**5 // (file - 10), 10**5)
+            nums = [random.randint(10**9 - n, 10**9) for _ in range(n)]
+            ans1 = standard_procedure(nums)
             with open(f"test_data/example_{file}.in", "w", encoding="utf-8") as fw:
-                lst = [f"{n} {k}", " ".join(str(x) for x in nums)]
+                lst = [f"{n}", " ".join(str(x) for x in nums)]
                 fw.write("\n".join(lst))
             with open(f"test_data/example_{file}.out", "w", encoding="utf-8") as fw:
                 fw.write(str(ans1))
-            print(ans1, ans1 >= 2**32 - 1)
+            print(n, ans1)
 
         zip_folder("test_data", "test_data.zip")
         return
