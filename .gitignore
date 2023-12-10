@@ -1,5 +1,2 @@
 /.pytest_cache/
 /.idea/
-/test_data/
-**/test_data/
-**/*.zip
